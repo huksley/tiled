@@ -71,6 +71,10 @@ QString Command::replaceVariables(const QString &string, bool quoteValues) const
         finalString.replace(QLatin1String("%mapfile"),
                             replaceString.arg(fileName));
 
+        QString mapName(fileName);
+        mapName.replace(QLatin1String(".tmx"), QLatin1String(""));
+        finalString.replace(QLatin1String("%mapname"), replaceString.arg(mapName));
+
         QFileInfo fileInfo(fileName);
         QString mapPath = fileInfo.absolutePath();
 

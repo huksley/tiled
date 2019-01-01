@@ -71,6 +71,9 @@ the following variables:
 ``%mapfile``
     the current maps full path.
 
+``%mapname``
+    the current maps full path without .tmx extension
+
 ``%mappath``
     the full folder path in which the map is located. (since Tiled 0.18)
 
